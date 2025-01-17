@@ -46,7 +46,7 @@
     margin-bottom: 50px;
 }
 
-@media(max-width: 700px){
+@media(max-width: 600px){
 
     .hero h1{
         margin-left: 140px;
@@ -54,19 +54,24 @@
     }
 
     .hero p{
-      width: 400px;
+      width: 300px;
+      font-size: 10px;
     }
+
+    .hero1 h1{
+        margin-left: 70px;
+        }
 }
 
 .gallery img{
-        width: 150px;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 5px solid #02c934;
-        object-fit: cover;
+    width: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #02c934;
+    object-fit: cover;
 }
 
-@media(max-width: 700px){
+@media(max-width: 600px){
      .gallery{
         display: flex;
         flex-wrap: wrap;
@@ -79,7 +84,6 @@
        flex: 1 1 calc(25% - 10px);
     }
 }
-
 
 .footer{
     text-align: center;
@@ -101,5 +105,4 @@
 .footer h3{
     font-weight: 100;
     font-style: italic;
-
 }
