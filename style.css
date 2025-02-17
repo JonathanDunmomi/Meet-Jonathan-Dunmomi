@@ -5,7 +5,6 @@
 }
 
 .all{
-    background-color: black;
     min-height: 130vh;
     display: flex;
     justify-content: center;
@@ -14,11 +13,18 @@
 }
 
 .hero{
-    background-color: rgb(16, 14, 14);
+    background-color: rgb(48, 45, 45);
     min-width: 600px;
     min-height: 100vh;
     padding-left: 50px;
     border-radius: 50px;
+}
+
+.hero1{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-right: 100px;
 }
 
 @media(max-width: 600px){
@@ -76,4 +82,48 @@
     width: 500px;
     padding-left:200px;
     cursor: pointer;
+}
+
+
+:root {
+    --background-light: #ffffff;
+    --text-light: #000000;
+    --background-dark: #121212;
+    --text-dark: #ffffff;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background-light);
+    color: var(--text-light);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode {
+    background-color: var(--background-dark);
+    color: var(--text-dark);
+}
+
+.toggle-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.toggle-button {
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 0px;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 50px;
+    transition: background-color 0.3s, color 0.3s;
+    margin-left: 300px;
+}
+
+.toggle-button:hover {
+    background-color: blue;
 }
