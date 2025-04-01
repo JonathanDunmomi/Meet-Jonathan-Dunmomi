@@ -1,35 +1,49 @@
-*{
+/* General Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-.all{
+.all {
     min-height: 100vh;
 }
 
-.header{
+.header {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    flex-wrap: wrap;
 }
 
-.header a img{
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 5px solid #02a8c9;
-        object-fit: cover;
+.header a img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 5px solid #02a8c9;
+    object-fit: cover;
 }
 
-.header h1{
+.header h1 {
     color: rgb(17, 17, 209);
     font-style: italic;
-    font-size: 30px;
+    font-size: 28px;
 }
 
-@media(max-width: 600px){
-    .header a img{
-        margin-right: 200px;
+/* Responsive Header */
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .header a img {
+        width: 100px;
+        height: 100px;
+    }
+    .header h1 {
+        font-size: 24px;
     }
 }
 
@@ -41,7 +55,6 @@
 }
 
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
     background-color: var(--background-light);
     color: var(--text-light);
@@ -57,101 +70,108 @@ body.dark-mode {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 .toggle-button {
-    padding: 5px 10px;
-    font-size: 16px;
-    border: 0px;
-    background: none;
-    color: inherit;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
     cursor: pointer;
     border-radius: 5px;
-    margin-top: 50px;
     transition: background-color 0.3s, color 0.3s;
-    margin-left: 300px;
 }
 
 .toggle-button:hover {
     background-color: rgb(201, 141, 141);
 }
 
-.hero{
-     margin: 50px 200px;
-     padding-bottom: 20px;
+.hero {
+    margin: 40px auto;
+    max-width: 90%;
+    text-align: center;
+    padding-bottom: 20px;
 }
 
-.hero h1{
-    margin-bottom: 20px;
-    margin-left: 350px;
-    font-size: 20px;
+.hero h1 {
+    font-size: 24px;
     color: rgb(0, 136, 255);
     font-weight: 900;
 }
 
-.hero p{
-    color: #fff;
+.hero p {
+    color: #444;
     font-style: italic;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    font-size: 16px;
 }
 
-@media(max-width: 600px){
-
-    .hero h1{
-        margin-left: 140px;
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 20px;
         color: red;
     }
-
-    .hero p{
-      width: 300px;
-      font-size: 10px;
+    .hero p {
+        width: 90%;
+        font-size: 12px;
     }
-
-    .hero1 h1{
-        margin-left: 70px;
-        }
 }
 
-.gallery img{
-    width: 150px;
+/* Gallery Styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery img {
+    width: 120px;
     border-radius: 50%;
-    overflow: hidden;
     border: 5px solid #02c934;
     object-fit: cover;
 }
 
-@media(max-width: 600px){
-     .gallery{
-        display: flex;
-        flex-wrap: wrap;
+@media (max-width: 600px) {
+    .gallery {
         gap: 10px;
-     }
-
-    .gallery img{
-       max-width: 100%;
-       height: auto;
-       flex: 1 1 calc(25% - 10px);
+    }
+    .gallery img {
+        width: 80px;
+        height: auto;
     }
 }
 
-.footer{
+/* Footer Styles */
+.footer {
     text-align: center;
     margin-top: 20px;
     background-color: red;
-    height: 20vh;
+    padding: 20px 10px;
+    color: white;
 }
 
-.footer a{
+.footer a {
     color: #fff;
-    padding: 100px 10px;   
+    padding: 5px 10px;
 }
 
-.footer a img{
+.footer a img {
     width: 20px;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 
-.footer h3{
+.footer h3 {
     font-weight: 100;
     font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .footer {
+        padding: 10px;
+    }
+    .footer h3 {
+        font-size: 14px;
+    }
 }
